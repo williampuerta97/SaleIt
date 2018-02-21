@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Proyecto
 {
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
@@ -29,7 +31,25 @@ namespace Proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new Menu().Show();
+
+            String user = txtUser.Text;
+            String pass = txtPass.Text;
+            if (user.Length > 0 && pass.Length > 0)
+            {
+                String sql = String.Format("SELECT p.* FROM persona p " +
+                    "WHERE docPersona = '{0}' AND password = '{1}'", user, pass);
+                DataTable tab = Conexion.Data(sql);
+                if (tab.Rows.Count > 0)
+                {
+                    MessageBox.Show("Bienvenido: "+tab.Columns[2]);
+                    new Menu().Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa el Usuario o contraseña", "Verifica", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
