@@ -1,4 +1,4 @@
-﻿namespace ProyectoSaleIt
+﻿namespace Proyecto
 {
     partial class Informes
     {

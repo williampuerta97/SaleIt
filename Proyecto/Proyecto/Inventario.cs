@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
-    public partial class Form1 : Form
+    public partial class Inventario : Form
     {
-        public Form1()
+        public Inventario()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form2().Show();
+            new NuevoProd().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new ActualProd().Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new EliminarProd().Show();
         }
     }
 }

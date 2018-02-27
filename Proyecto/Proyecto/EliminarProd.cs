@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
-    public partial class Form4 : Form
+    public partial class EliminarProd : Form
     {
-        public Form4()
+        public EliminarProd()
         {
             InitializeComponent();
         }
