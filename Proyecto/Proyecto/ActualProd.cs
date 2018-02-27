@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoSaleIt
+namespace Proyecto
 {
-    public partial class Form4 : Form
+    public partial class Form3 : Form
     {
-        public Form4()
+        public Form3()
         {
             InitializeComponent();
         }
+
+        
     }
 }
