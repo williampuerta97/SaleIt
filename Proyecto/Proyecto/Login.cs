@@ -13,7 +13,7 @@ namespace Proyecto
 {
     public partial class Login : Form
     {
-        
+
         public Login()
         {
             InitializeComponent();
@@ -41,13 +41,18 @@ namespace Proyecto
                 DataTable tab = Conexion.Data(sql);
                 if (tab.Rows.Count > 0)
                 {
-                    MessageBox.Show("Bienvenido: "+tab.Columns[2]);
-                    new Menu().Show();
+                    Hide();                    
+                    new Menu(tab.Rows[0]).ShowDialog();
+                    Show();
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos", "Verificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Ingresa el Usuario o contraseña", "Verifica", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingresa el Usuario o contraseña", "Verifica", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }

@@ -12,6 +12,7 @@ namespace Proyecto
 {
     public partial class Vender : Form
     {
+        
         public Vender()
         {
             InitializeComponent();

@@ -15,6 +15,14 @@ namespace Proyecto
         public RegistrarUsuario()
         {
             InitializeComponent();
+            String sql = "SELECT docPersona, Nombres, Apellidos, Rol FROM persona";
+            DataTable table = Conexion.Data(sql);
+            dataGridView1.DataSource = table;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

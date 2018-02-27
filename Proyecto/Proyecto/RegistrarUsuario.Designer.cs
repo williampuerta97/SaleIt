@@ -51,18 +51,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox7);
@@ -92,17 +92,17 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(262, 315);
+            this.textBox8.Location = new System.Drawing.Point(372, 322);
             this.textBox8.Name = "textBox8";
             this.textBox8.PasswordChar = '*';
-            this.textBox8.Size = new System.Drawing.Size(153, 23);
+            this.textBox8.Size = new System.Drawing.Size(99, 23);
             this.textBox8.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(107, 322);
+            this.label9.Location = new System.Drawing.Point(227, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 16);
             this.label9.TabIndex = 17;
@@ -110,17 +110,17 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(336, 253);
+            this.textBox7.Location = new System.Drawing.Point(105, 322);
             this.textBox7.Name = "textBox7";
             this.textBox7.PasswordChar = '*';
-            this.textBox7.Size = new System.Drawing.Size(135, 23);
+            this.textBox7.Size = new System.Drawing.Size(110, 23);
             this.textBox7.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(245, 257);
+            this.label8.Location = new System.Drawing.Point(11, 329);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 16);
             this.label8.TabIndex = 15;
@@ -266,6 +266,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -277,43 +278,21 @@
             this.button1.Text = "REGISTRAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Documento,
-            this.Nombres,
-            this.Apellidos,
-            this.Rol});
             this.dataGridView1.Location = new System.Drawing.Point(580, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(402, 317);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Documento
-            // 
-            this.Documento.HeaderText = "Documento";
-            this.Documento.Name = "Documento";
-            // 
-            // Nombres
-            // 
-            this.Nombres.HeaderText = "Nombres";
-            this.Nombres.Name = "Nombres";
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            // 
-            // Rol
-            // 
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -335,6 +314,24 @@
             this.label10.Size = new System.Drawing.Size(102, 19);
             this.label10.TabIndex = 4;
             this.label10.Text = "Trabajadores";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(350, 252);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(262, 260);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 16);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Sucursal:";
             // 
             // RegistrarUsuario
             // 
@@ -382,11 +379,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

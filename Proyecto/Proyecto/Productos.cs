@@ -15,6 +15,20 @@ namespace Proyecto
         public Productos()
         {
             InitializeComponent();
+            String sql = "SELECT i.NumRef NumRef, i.Nombre Nombre, i.Marca Marca, SUM(s.Cantidad) Cantidad FROM " +
+                "item i INNER JOIN stock s ON i.idItem = s.Item_id WHERE s.Concepto = 'Entrada'";
+            DataTable table = Conexion.Data(sql);
+            dataGridView1.DataSource = table;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
